@@ -4,11 +4,13 @@ body {
 }
 
 .header {
-    background-color: rgba(28, 94, 13, 0.705);
+    background-color: rgba(78, 131, 67, 0.705);
     color: white;
     padding: 20px 0;
     font-size: 1.2rem;
     font-weight: bold;
+    background-image: url(images/background.jpg);
+    background-size: cover;
 }
 
 .main-menu ul {
@@ -56,4 +58,31 @@ p {
 
 .avatar img {
     height: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.w-50 {
+    width: 500px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact-me-btn {
+    color: white;
+    border-color: white;
 }
