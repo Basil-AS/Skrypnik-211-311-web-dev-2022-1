@@ -1,0 +1,147 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    display: block;
+    height: 55px;
+}
+
+.header {
+    background-color: lightgrey;
+    padding: 1rem 0;
+    border-bottom: 5px solid #0885c6;
+    position: sticky;
+    top: 0;
+}
+
+.container {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear:both;
+}
+
+.main-menu {
+    float: left;
+}
+
+.profile {
+    float: right;
+}
+
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu ul li {
+    display: inline;
+}
+
+.sidebar {
+    padding: 1rem 0;
+    float: left;
+    width: 15rem;
+    position: sticky;
+    top: 55px;
+}
+
+.page-content{
+    margin-left: 15rem;
+    padding: 1rem;
+}
+
+.product-category-header{
+    margin-top: 0;
+}
+
+.product-card {
+    display: inline-block;
+    height: 22rem;
+    width: 31rem;
+    border: 2px solid #0885c6;
+    margin: 0 0.625rem 0.625rem 0;
+    border-radius: 5px;
+}
+
+.product-image {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-details {
+    float: right;
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.product-details header {
+    font-weight: bold;
+    font-size: 1.2rem;
+
+}
+
+.product-details .information{
+    text-align: justify;
+    font-size: 1.125rem;
+    height: 65%;
+    overflow: auto;
+}
+
+.control {
+    text-align: center;
+}
+
+.control .btn {
+    font-size: 1rem;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.control .btn span {
+    padding: 0.625rem 1.25rem;
+    display: inline-block;
+}
+
+.control .price{
+    background-color: #333;
+}
+
+.control .buy {
+    background-color: #0885c6;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: lightgrey;
+    padding: 1rem 0;
+    border-top: 5px solid #0885c6;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

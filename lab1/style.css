@@ -1,6 +1,7 @@
 /*КОММЕНТАРИЙ*/
 body {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .header {
@@ -85,4 +86,14 @@ p {
 .contact-me-btn {
     color: white;
     border-color: white;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
 }
