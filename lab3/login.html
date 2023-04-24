@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход | Аптека Смарт</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalogue.html">Каталог</a></li>
+                    <li><a href="stores.html">Магазины</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="profile">
+                <a href="login.html">Вход</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="login-container">
+            <form class="login-form" method="post" action="https://httpbin.org/post" enctype="multipart/form-data">
+                <div>
+                    <label for="login">Введите логин</label>
+                    <br>
+                    <input class="login-input" type="text" id="login" name="login" placeholder="username" required>
+                </div>
+                <div>
+                    <label for="password">Введите пароль</label>
+                    <br>
+                    <input class="login-input" type="password" id="password" name="password" placeholder="password" required>
+                </div>
+                <div>
+                    <input type="checkbox" name="remember_me" id="remember_me" value="true">
+                    <label for="remember_me">Запомнить меня</label>
+                </div>
+                <button class="login-btn" type="submit">Войти</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            &copy; Скрыпник В.А.
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+
+.background-color-header {
+  background-color: #4d6eb5;
+}
+
+.hero {
+  background-color: #eaecf0;
+}
+
+.background-color div {
+	background-color: #3194b8;
+}
+
+.call-to-action {
+  background-color: #032f53;
+  color:white;
+}
+
+.heading-line {
+  width: 200px;
+  height: 3px;
+  background-color: #ed7846;
+}
+
+i.bi{
+  color: #83F3ED;
+  font-size: 2rem;   
+}
+
+.technologies .row{
+  background-color: #011627;
+  color: #fcdbcd;;
+}
+
+.technologies .row>*{
+  height: 300px;
+}
+
+.technologies .row img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.size {
+  width: 3%;
+}
+
+.footer{
+  background-color: #4d6eb5;
+}

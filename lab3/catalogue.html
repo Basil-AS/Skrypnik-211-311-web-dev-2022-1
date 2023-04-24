@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог | Аптека Смарт</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalogue.html">Каталог</a></li>
+                    <li><a href="stores.html">Магазины</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="profile">
+                <a href="login.html">Вход</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <aside class="sidebar">
+                <form class="filter-form">
+                    <fieldset>
+                        <legend>Фильтры</legend>
+                        <div>
+                            <label for="category">Категория:</label>
+                            <select id="category">
+                                <option value="all">Все</option>
+                                <option value="pain-relief">Обезболивающие</option>
+                                <option value="antibiotics">Антибиотики</option>
+                                <option value="vitamins">Витамины</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="price">Цена:</label>
+                            <input type="range" id="price" min="0" max="1000" step="50">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="on-sale">
+                            <label for="on-sale">Только со скидкой</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="available" name="availability">
+                            <label for="available">В наличии</label>
+                            <br>
+                            <input type="radio" id="not-available" name="availability">
+                            <label for="not-available">Нет в наличии</label>
+                        </div>
+                        <div>
+                            <label for="manufacturer">Производитель:</label>
+                            <select id="manufacturer">
+                                <option value="all">Все</option>
+                                <option value="manuf1">Производитель 1</option>
+                                <option value="manuf2">Производитель 2</option>
+                                <option value="manuf3">Производитель 3</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="form">Форма выпуска:</label>
+                            <select id="form">
+                                <option value="all">Все</option>
+                                <option value="tablet">Таблетки</option>
+                                <option value="syrup">Сироп</option>
+                                <option value="gel">Гель</option>
+                                <option value="ointment">Мазь</option>
+                            </select>
+                        </div>
+                        <button type="submit">Применить фильтры</button>
+                    </fieldset>
+                </form>
+            </aside>
+            <section class="product-grid">
+                <div class="product">
+                    <img src="images/product1.jpg" alt="Лекарство 1">
+                    <h2>Ибупрофен таб 200 мг 50 шт </h2>
+                    <p>Активное вещество:
+                        1 таблетка содержит: ибупрофен – 200,000 мг.</p>
+                    <p>Цена: 250 руб.</p>
+                    <button type="button">Добавить в корзину</button>
+                </div>
+                <div class="product">
+                    <img src="images/product2.jpg" alt="Лекарство 2">
+                    <h2>Отривин </h2>
+                    <p>Увлажняющая формула спрей для носа при насморке и заложенности носа, 140 мкг/доза 60 доз </p>
+                    <p>Цена: 200 руб.</p>
+                    <button type="button">Добавить в корзину</button>
+                </div>
+                <div class="product">
+                    <img src="images/product3.jpg" alt="Лекарство 3">
+                    <h2>Зодак Экспресс</h2>
+                    <p>1 таблетка содержит: левоцетиризина дигидрохлорид - 5,00 мг.</p>
+                    <p>Цена: 700 руб.</p>
+                    <button type="button">Добавить в корзину</button>
+                </div>
+                <div class="product">
+                    <img src="images/product4.jpg" alt="Лекарство 4">
+                    <h2>Ринонорм  </h2>
+                    <p>Комфорт спрей для взрослых и детей с 6 лет 10 мл</p>
+                    <p>Цена: 150 руб.</p>
+                    <button type="button">Добавить в корзину</button>
+                </div>
+               
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            &copy; Скрыпник В.А.
+        </div>
+    </footer>
+</body>
+</html>
+<style>
+    .sidebar {
+        width: 25%;
+        padding: 1rem;
+        position: sticky;
+        top: 10px;
+    }

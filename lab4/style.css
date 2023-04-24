@@ -1,0 +1,36 @@
+body {
+	margin: 0;
+	font-family: 'Oswald', sans-serif;
+}
+
+main {
+	min-height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-image: url(images/background-image1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+div {
+	border-radius: 5px;
+	border: 2px solid black;
+	padding-left: 1rem;
+	padding-right: 2rem;
+
+	/* background-color: lightsteelblue; */
+	background-image: url(images/cloud-sky.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	font-size: 30px;
+}
+
+a {
+	color: black;
+}

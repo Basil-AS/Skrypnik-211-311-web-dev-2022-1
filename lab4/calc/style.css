@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+
+	background-image: url(images/fon-rabochego-stola.jpg);
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header {
+	font-family: 'Oswald', sans-serif;
+
+    min-height: 5vh;
+    /* display: flex; */
+    /* display: block; */
+}
+
+.div-header {
+    background-color: bisque;
+
+    /* justify-content: center; */
+    width: 172px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+
+    border: 3px solid brown;
+    border-radius: 15px;
+
+    margin: 5px;
+}
+
+.a-class {
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+}
+
+main {
+	font-family: 'Orbitron', sans-serif;
+	font-family: 'Prompt', sans-serif;
+
+    min-height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc {
+	width: 450px;
+    height: 390px;
+
+	background-color: cadetblue;
+	border-radius: 25px;
+    border: 3px solid whitesmoke;
+
+	/* text-align: center; */
+	padding: 5px;
+}
+
+/* вывод результатов */
+.display {
+	/* background-color: rgb(190, 90, 60); */
+	margin: 5px;
+	
+	/* text-align: right;
+	height: 100px; */
+	/* font-size: 30px;
+	vertical-align: middle;
+	line-height: 100px; */
+	/* padding-top: 7px; */
+	padding-right: 7px;
+
+	border-bottom: 1px solid black;
+
+	height: 45px;
+	text-align: right;
+	font-size: 2.13rem;
+	background-color: rgb(190, 90, 60);
+
+}
+
+/* form {
+	text-align: center;
+} */
+
+input {
+	text-align: right;
+	font-size: 2.13rem;
+	background-color: rgb(190, 90, 60);
+}
+
+.buttons {
+	display: flex;
+}
+
+.key-style button {
+	height: 70px;
+	width: 70px;
+	border-radius: 100%;
+	border-color: white;
+	background-color: lightgray;
+	/* font-weight: bold; */
+
+	margin-top: 3px;
+	margin-bottom: 3px;
+	
+	font-size: 32px;
+}
+
+.digits {
+	flex-grow: 3;
+	padding-left: 15px;
+	padding-right: 10px;
+	border-right: 1px solid black;
+}
+
+.other {
+	flex-grow: 2;
+	padding-left: 15px;
+}

@@ -1,0 +1,45 @@
+@media print {
+    .sidebar,
+    .header,
+    .footer,
+    .scroll-to-top-btn,
+    .image-index,
+    .image-cat {
+        display: none;
+    }
+
+    .products-list {
+        justify-content: center;
+        filter: grayscale(100%);
+    }
+
+    .product-category-header {
+        text-align: center;
+    }
+
+    .control .btn {
+        border: 1px solid black;
+        color: black;
+    }
+
+    .product-card {
+        border: 1px solid black;
+    }
+
+    .mapgreen {
+        height: 400px;
+        filter: grayscale(100%);
+    }
+
+    .p-stores p {
+        width: 100%;
+    }
+
+    .product-image img {
+        width: 33%;
+    }
+}
+
+@page {
+    margin: 10mm 10mm 10mm 20mm;
+}
