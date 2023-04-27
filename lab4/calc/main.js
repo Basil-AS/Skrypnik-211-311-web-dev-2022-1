@@ -1,5 +1,3 @@
-
-
 function priority(operation) {
     if (operation == '+' || operation == '-') {
         return 1;
@@ -8,17 +6,14 @@ function priority(operation) {
     }
 }
 
-// Проверка, является ли строка str числом.
 function isNumeric(str) {
     return /^\d+(.\d+){0,1}$/.test(str);
 }
 
-// Проверка, является ли строка str цифрой.
 function isDigit(str) {
     return /^\d{1}$/.test(str);
 }
 
-// Проверка, является ли строка str оператором.
 function isOperation(str) {
     return /^[\+\-\*\/]{1}$/.test(str);
 }
@@ -44,6 +39,7 @@ function tokenize(str) {
     }
     return tokens;
 }
+
 function compile(str) {
     let out = [];
     let stack = [];
@@ -71,7 +67,6 @@ function compile(str) {
 }
 
 function evaluate(str) {
-
     let strings = compile(str).split(' ');
     let res = [];
     for (char of strings) {
@@ -81,25 +76,22 @@ function evaluate(str) {
             let num1 = res.pop();
             let num2 = res.pop();
             if (char == '+') {
-                res.push(num1 + num2).toFixed(2);
+                res.push((num1 + num2).toFixed(2));
             } else if (char == '-') {
-                res.push(num2 - num1).toFixed(2);
+                res.push((num2 - num1).toFixed(2));
             } else if (char == '*') {
-                res.push(num1 * num2).toFixed(2);
+                res.push((num1 * num2).toFixed(2));
             } else if (char == '/') {
-                res.push(num2 / num1).toFixed(2);
+                res.push((num2 / num1).toFixed(2));
             }
         }
     }
-    return res.pop().toFixed(2);
+    return parseFloat(res.pop()).toFixed(2);
 }
-
-
 
 function clickHandler(event) {
     if ((event.target.className == "digits") ||
         (event.target.className == "other")) return;
-
     let mes = document.querySelector(".mes");
 
     if (event.target.className == "key clear") {
@@ -111,7 +103,6 @@ function clickHandler(event) {
     }
 }
 
-// Назначьте нужные обработчики событий.
 window.onload = function () {
     let buttons = document.querySelector(".buttons");
     buttons.onclick = clickHandler;

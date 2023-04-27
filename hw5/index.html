@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/css/font-awesome/6.2.1/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>To Do List</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-dark" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">To Do List</a>
+                <button class="btn btn-success ms-auto" type="button" data-bs-toggle="modal" data-bs-target="#new-task"
+                    data-action="create">Новая задача</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Уведомления -->
+    <div class="alerts">
+        <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+            Успешно!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+            Ошибка: <span class="error"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <!-- Контент -->
+    <div class="container mt-3">
+        <div class="row ">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        To Do
+                    </div>
+                    <div class="card-body p-0" id="ToDo">
+                        <ul class="list-group list-group-flush">
+
+                        </ul>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <span class="counter-tasks badge text-bg-primary">0</span> задач
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        Done
+                    </div>
+                    <div class="card-body p-0" id="Done">
+                        <ul class="list-group list-group-flush">
+
+                        </ul>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <span class="counter-tasks badge text-bg-primary">0</span> задач
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно Новая задача -->
+    <div class="modal fade" id="new-task" tabindex="-1" aria-labelledby="newTaskLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="newTaskLabel">Создание новой задачи</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="task-name" class="col-form-label">Название задачи</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" type="text" id="task-name" name="task-name">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="task-desc" class="col-form-label">Описание задачи</label>
+                            </div>
+                            <div class="col-md-8">
+                                <textarea class="form-control" type="text" id="task-desc" name="task-desc" cols="30"
+                                    rows="10"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="task-status" class="col-form-label">Статус</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-select" id="task-status" name="task-status">
+                                    <option value="to-do">To Do</option>
+                                    <option value="done">Done</option>
+                                </select>
+                            </div>
+                        </div>
+                        <input type="hidden" name="action">
+                        <input type="hidden" name="task-id">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary create-new-task"
+                        data-bs-dismiss="modal">Создать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно Удаление задачи -->
+    <div class="modal fade" id="del-task" tabindex="-1" aria-labelledby="delTaskLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="delTaskLabel">Удаление задачи</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Вы уверены, что хотите удалить задачу
+                        <span class="name-task"></span> ?
+                    </p>
+                    <form>
+                        <input type="hidden" name="task-id">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет</button>
+                    <button type="button" class="btn btn-danger delete-task-btn" data-bs-dismiss="modal">Да</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- шаблон задачи -->
+    <template id="task-template">
+        <li class="list-group-item d-flex task">
+            <div class="task-name"></div>
+            <div class="actions ms-auto">
+                <i class="bi bi-arrow-left arrow"></i>
+                <i class="bi bi-eye" data-bs-toggle="modal" data-bs-target="#new-task" data-action="show"></i>
+                <i class="bi bi-pencil-fill" data-bs-toggle="modal" data-bs-target="#new-task" data-action="edit"></i>
+                <i class="bi bi-trash3" data-bs-toggle="modal" data-bs-target="#del-task"></i>
+                <i class="bi bi-arrow-right arrow"></i>
+            </div>
+        </li>
+    </template>
+
+    <!-- Скрипты -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

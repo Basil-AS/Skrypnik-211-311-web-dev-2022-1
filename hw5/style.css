@@ -1,0 +1,17 @@
+/* если элемент стрелка влево находится в родителе To Do, то убрать */
+#ToDo .bi-arrow-left {
+    display: none;
+}
+
+#Done .bi-arrow-right {
+    display: none;
+}
+
+.actions {
+    visibility: hidden;
+}
+
+/* при наведении курсора на элемент списка, отображаются действия */
+.list-group-item:hover .actions {
+    visibility: visible;
+}

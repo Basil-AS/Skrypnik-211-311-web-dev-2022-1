@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная</title>
+    <link rel="icon" href="images/map.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body class="body-color">
+    <header class="py-3 text-white header-color mb-2">
+        <nav class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <div class="d-flex align-items-center mb-2 mb-lg-0">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <img src="images/logo.png" alt="Company Logo" class="me-2 logo">
+                        <div>
+                            <h1 class="h4 mb-0">МосТурист</h1>
+                            <p class="mb-0">Экскурсии по Москве</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="d-flex flex-wrap align-items-center justify-content-center" id="buttons-container">
+                    <button type="button" class="btn btn-outline-light me-2 my-1">Личный кабинет</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="info-section mb-2 py-3">
+            <div class="container">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-sm-12 col-md-6">
+                        <h1>МосТурист</h1>
+                        <p class="fw-bold">
+                            Мы предлагаем уникальные туристические маршруты по Москве для любителей истории, культуры и
+                            архитектуры. Наши опытные гиды познакомят вас с самыми интересными и значимыми
+                            достопримечательностями столицы России.
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-md-6 my-1">
+                        <img class="img-fluid w-50 rounded mx-auto d-block" src="images/main.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Блок с информацией о достоинствах вашей компании (структура этого блока
+выбирается по усмотрению студента, однако обязательным условием является
+использование Bootstrap Grid System). -->
+        <section class="advantage-section mb-2 py-3">
+            <div class="container">
+                <h2 class="text-center text-decoration-underline t">Преимущества нашей компании</h2>
+                <div class="heading-line mx-auto my-3"></div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 text-center py-3">
+                        <i class="bi bi-geo-alt bi-font-size"></i>
+                        <h4>Индивидуальные маршруты</h4>
+                        <p>Мы разрабатываем туры в соответствии с интересами и пожеланиями наших клиентов.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 text-center py-3">
+                        <i class="bi bi-currency-dollar bi-font-size"></i>
+                        <h4>Выгодные цены</h4>
+                        <p>Наши туры доступны для разных бюджетов, и мы предлагаем гибкие скидки для групп.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 text-center py-3">
+                        <i class="bi bi-people bi-font-size"></i>
+                        <h4>Опытные гиды</h4>
+                        <p>Наши гиды являются профессионалами с глубокими знаниями истории и культуры Москвы.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 text-center py-3">
+                        <i class="bi bi-book bi-font-size"></i>
+                        <h4>Образовательная составляющая</h4>
+                        <p>Наши туры не только развлекательны, но и познавательны, обогащая ваш опыт и расширяя знания
+                            об истории Москвы.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 text-center py-3">
+                        <i class="bi bi-gift bi-font-size"></i>
+                        <h4>Специальные предложения</h4>
+                        <p>Мы регулярно проводим акции и предлагаем специальные предложения для наших клиентов.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 text-center py-3">
+                        <i class="bi bi-compass bi-font-size"></i>
+                        <h4>Поддержка 24/7</h4>
+                        <p>Наша команда всегда готова помочь вам в любое время суток, отвечая на вопросы и решая
+                            возникающие проблемы.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Cекция доступных маршрутов. -->
+        <section class="list-of-walking-routes routes-section mb-2 py-3 ">
+            <div class="container my-4">
+                <h2 class="text-center ms-4 fs-2">Доступные маршруты</h2>
+                <form class="row align-items-end text-center py-3 px-3">
+                    <div class="col-12 col-md-6">
+                        <div class="search-field-item">
+                            <span id="label-search-field">Поиск по названию:</span>
+                            <!-- поиск по названию маршрута -->
+                            <input type="text" class="search-field mt-2" placeholder="Введите название маршрута">
+                        </div>
+                    </div>
+                    <!-- поиск по достопримечательности -->
+                    <div class="col-12 col-md-6">
+                        <span id="selector-search-field">Поиск по достопримечательности:</span>
+                        <select name="landmark-select" id="landmark-select" class="landmark-select form-select mt-2">
+                            <!-- селектор для выбора достопримечательности -->
+                            <option value="" selected></option>
+                        </select>
+                    </div>
+                </form>
+                <div class="table-walking-routes">
+                    <!-- таблица с доступными пешеходными маршрутами -->
+                </div>
+                <div class="pagination-bar d-flex justify-content-center py-3">
+                    <!-- Здесь будет располагаться навигация по страницам -->
+                </div>
+            </div>
+        </section>
+        <!-- Cекция гидов на выбранном маршруте -->
+        <section class="list-of-guides search-gid-to-rout" id="list-of-guides">
+            <div class="container my-4">
+                <h2 class="text-center ms-4 fs-2">Доступные гиды по маршруту <span class="guides-name-of-route"></span>
+                </h2>
+                <form class="row align-items-end text-center py-3 px-3">
+                    <div class="col-12 col-md-6 justify-content-start">
+                        <span id="selector-language-guides">Выберите предпочтительный язык экскурсии:</span>
+                        <select name="guides-select" id="guides-select" class="guides-select form-select mt-2">
+                            <option value="" selected></option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>Опыт работы</span>
+                        <div class="experience-from-to text-center">
+                            <input type="text" class="experience-from" id="experience-from" placeholder="от">
+                            <input type="text" class="experience-to" id="experience-to" placeholder="до">
+                        </div>
+                    </div>
+                </form>
+                <div class="table-guides">
+                    <!-- таблица с гидами -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Контейнер для уведомлений -->
+    <div class="alert-container"></div>
+
+    <!-- модальное окно для создания заявки -->
+    <div class="modal fade" id="createRequest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">
+                        <!-- название модального окна -->
+                        <span class="name-modal">Оформление заявки</span>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- тело модального окна -->
+                    <!-- форма для более удобного взаимодействия модальным окном -->
+                    <form class="needs-validation was-validated">
+                        <div class="row mb-3">
+                            <label class="col-md-4 col-form-label" for="fio-guide">ФИО гида:</label>
+                            <div class="col-md-8">
+                                <input class="form-control-plaintext" type="text" id="fio-guide" name="fio-guide"
+                                    value="" disabled>
+                            </div>
+                            <input type="hidden" name="idGuide" id="idGuide">
+                            <input type="hidden" name="priceGuide" id="priceGuide">
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-md-4 col-form-label" for="route-name">Название маршрута:</label>
+                            <div class="col-md-8">
+                                <textarea class="form-control-plaintext" type="text" id="route-name" name="route-name"
+                                    value="" disabled></textarea>
+                            </div>
+                            <input type="hidden" name="idRoute" id="idRoute">
+
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <label class="col-form-label" for="excursion-date">Дата<br>экскурсии:</label>
+                                <input class="form-control" type="date" id="excursion-date" name="excursion-date"
+                                    value="" required>
+                                <small>Дата заявки должна быть больше текущей даты.</small>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, выберите дату экскурсии
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <label class="col-form-label" for="start-time">Время<br>начала:</label>
+                                <input class="form-control" type="time" id="start-time" name="start-time" value="09:00"
+                                    step="1800" min="9:00" max="23:00" required>
+                                <small>Экскурсии доступны с 9 до 23 с интервалом в 30 минут.</small>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, выберите время экскурсии
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <label class="col-form-label" for="duration">Длительность<br>экскурсии:</label>
+                                <select class="form-select" name="duration" id="duration" required>
+                                    <option value="1" selected>1 час</option>
+                                    <option value="2">2 часа</option>
+                                    <option value="3">3 часа</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, выберите длительность экскурсии
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-5 mb-3">
+                                <label class="col-form-label" for="number-of-people">Количество человек:</label>
+                                <select class="form-select" name="number-of-people" id="number-of-people" required>
+                                    <option value="1" selected>1 человек</option>
+                                    <option value="2">2 человека</option>
+                                    <option value="3">3 человека</option>
+                                    <option value="4">4 человека</option>
+                                    <option value="5">5 человек</option>
+                                    <option value="6">6 человек</option>
+                                    <option value="7">7 человек</option>
+                                    <option value="8">8 человек</option>
+                                    <option value="9">9 человек</option>
+                                    <option value="10">10 человек</option>
+                                    <option value="11">11 человек</option>
+                                    <option value="12">12 человек</option>
+                                    <option value="13">13 человек</option>
+                                    <option value="14">14 человек</option>
+                                    <option value="15">15 человек</option>
+                                    <option value="16">16 человек</option>
+                                    <option value="17">17 человек</option>
+                                    <option value="18">18 человек</option>
+                                    <option value="19">19 человек</option>
+                                    <option value="20">20 человек</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, укажите количество человек
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span>Дополнительные опции:</span>
+                            </div>
+                            <div class="col-12 col-lg-6 mb-3">
+                                <div class="option-1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="option-1"
+                                            name="option-1">
+                                        <label class="form-check-label" for="option-1">
+                                            Опция 1
+                                        </label>
+                                    </div>
+                                    <div class="description">Описание опции</div>
+                                    <input class="form-control-plaintext" type="text" value="" id="discount-amount-1"
+                                        name="discount-amount-1" disabled>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 mb-3">
+                                <div class="option-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="option-2"
+                                            name="option-2">
+                                        <label class="form-check-label" for="option-2">
+                                            Опция 2
+                                        </label>
+                                    </div>
+                                    <div class="description">Описание опции</div>
+                                    <input class="form-control-plaintext" type="text" value="" id="discount-amount-2"
+                                        name="discount-amount-2" disabled>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label class="col-md-4 col-form-label" for="total-cost">Итоговая стоимость:</label>
+                                <div class="col-md-8">
+                                    <input class="form-control-plaintext" type="text" id="total-cost" name="total-cost"
+                                        value="Пожалуйста, заполните все поля" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <!-- Футер модального окна -->
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="buttonCancel">
+                        Отмена
+                    </button>
+                    <!-- data-bs-dismiss="modal" удаляется или добавляется в js, чтобы облегчить управление модальным окном -->
+                    <button type="button" class="btn btn-primary" id="buttonSendRequest">
+                        Отправить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Добавление шаблона всплывающего уведомления -->
+    <template id="alert-template">
+        <div class="alert-item d-flex justify-content-center">
+            <div class="alert alert-warning alert-dismissible fade show d-flex" role="alert" id="alertSetStyle">
+                <span class="text-alert-item text-center"></span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </template>
+
+    <!-- Добавление шаблона таблицы доступных пешеходных маршрутов -->
+    <template id="table-of-walking-routes">
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <div class="name fs-4">
+                    Название
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="desc fs-4">
+                    Описание
+                </div>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div class="main-object fs-4">
+                    Основные объекты
+                </div>
+            </div>
+            <div class="col-12 col-lg-2">
+                <div class="choose fs-4">
+                    Выбрать
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Добавление шаблона таблицы гидов по выбранному маршруту -->
+    <template id="table-of-guides">
+        <div class="row text-center">
+            <div class="col-12 d-flex justify-content-center col-lg-2">
+                <div class="img d-flex justify-content-center fs-4">
+                    Гид
+                </div>
+            </div>
+            <div class="col-12 col-lg-2">
+                <div class="name fs-4">
+                    ФИО
+                </div>
+            </div>
+            <div class="col-12 col-lg-2">
+                <div class="lang fs-4">
+                    Языки
+                </div>
+            </div>
+            <div class="col-12 col-lg-2">
+                <div class="exp fs-4">
+                    Опыт работы
+                </div>
+            </div>
+            <div class="col-12 col-lg-2">
+                <div class="price fs-4">
+                    Стоимость услуг в час
+                </div>
+            </div>
+            <div class="col-12 col-lg-2">
+                <div class="choose fs-4">
+                    Выбрать
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Футер сайта -->
+    <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 footer-color mt-auto">
+        <!-- Телефон и электронная почта -->
+        <div class="d-flex justify-content-start align-items-center col-md-3 text-center mx-3">
+            <ul class="list-unstyled mb-1">
+                <li>
+                    <a class="text-white" href="tel:+79876543210">+7 (987) 654-32-10</a>
+                </li>
+                <li>
+                    <a class="text-white" href="mailto:help@MosTurist.ru">help@MosTurist.ru</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Текст и символ авторского права -->
+        <div class="d-flex align-items-center justify-content-center mx-3 col-md-3">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-map"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z" />
+                </svg>
+            </a>
+            <span class="text-white">&copy;МосТурист 2023</span>
+        </div>
+
+        <!-- Ссылки на социальные сети -->
+        <ul class="nav col-md-3 justify-content-end list-unstyled d-flex mx-3 py-1">
+            <li class="mx-2">
+                <a class="text-white" href="#">
+                    <i class="bi bi-twitter"></i>
+                </a>
+            </li>
+            <li class="mx-2">
+                <a class="text-white" href="#">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </li>
+            <li class="mx-2">
+                <a class="text-white" href="#">
+                    <i class="bi bi-facebook"></i>
+                </a>
+            </li>
+            <li class="mx-2">
+                <a class="text-white" href="#">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+            </li>
+            <li class="mx-2">
+                <a class="text-white" href="#">
+                    <i class="bi bi-telegram"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <!-- Подключение main.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- Подключение Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

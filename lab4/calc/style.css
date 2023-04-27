@@ -1,127 +1,64 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 	margin: 0;
-
-	background-image: url(images/fon-rabochego-stola.jpg);
-    background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: #f0f0f0;
 }
 
-header {
-	font-family: 'Oswald', sans-serif;
-
-    min-height: 5vh;
-    /* display: flex; */
-    /* display: block; */
+.calculator {
+	width: 200px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
 }
 
-.div-header {
-    background-color: bisque;
-
-    /* justify-content: center; */
-    width: 172px;
-
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 1px;
-    padding-bottom: 3px;
-
-    border: 3px solid brown;
-    border-radius: 15px;
-
-    margin: 5px;
-}
-
-.a-class {
-    font-size: 18px;
-    color: black;
-    text-decoration: none;
-}
-
-main {
-	font-family: 'Orbitron', sans-serif;
-	font-family: 'Prompt', sans-serif;
-
-    min-height: 93vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.calc {
-	width: 450px;
-    height: 390px;
-
-	background-color: cadetblue;
-	border-radius: 25px;
-    border: 3px solid whitesmoke;
-
-	/* text-align: center; */
-	padding: 5px;
-}
-
-/* вывод результатов */
-.display {
-	/* background-color: rgb(190, 90, 60); */
-	margin: 5px;
-	
-	/* text-align: right;
-	height: 100px; */
-	/* font-size: 30px;
-	vertical-align: middle;
-	line-height: 100px; */
-	/* padding-top: 7px; */
-	padding-right: 7px;
-
-	border-bottom: 1px solid black;
-
-	height: 45px;
+.mes {
+	height: 40px;
+	line-height: 40px;
+	background-color: #f0f0f0;
+	margin-bottom: 20px;
+	padding: 0 10px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	overflow: hidden;
 	text-align: right;
-	font-size: 2.13rem;
-	background-color: rgb(190, 90, 60);
-
-}
-
-/* form {
-	text-align: center;
-} */
-
-input {
-	text-align: right;
-	font-size: 2.13rem;
-	background-color: rgb(190, 90, 60);
+	font-size: 24px;
 }
 
 .buttons {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
 }
 
-.key-style button {
-	height: 70px;
-	width: 70px;
-	border-radius: 100%;
-	border-color: white;
-	background-color: lightgray;
-	/* font-weight: bold; */
-
-	margin-top: 3px;
-	margin-bottom: 3px;
-	
-	font-size: 32px;
+.key {
+	background-color: #e0e0e0;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	padding: 5px;
 }
 
-.digits {
-	flex-grow: 3;
-	padding-left: 15px;
-	padding-right: 10px;
-	border-right: 1px solid black;
+.key:hover {
+	background-color: #d0d0d0;
 }
 
-.other {
-	flex-grow: 2;
-	padding-left: 15px;
+.key.clear {
+	grid-column: span 2;
+}
+
+.key.result {
+	grid-column: span 2;
+	background-color: #4CAF50;
+	color: #ffffff;
+}
+
+.key.result:hover {
+	background-color: #3f9a40;
 }
